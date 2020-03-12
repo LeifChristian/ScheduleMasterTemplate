@@ -4,7 +4,14 @@
   "private": true,
   "scripts": {
     
-    "start": "concurrently \"npm start\" \"cd client-react && npm start\"",
+
+    // below is original start script using concurrently.
+    //heroku is serving production build of react so hopefully
+    // a simple start script of npm start will suffice
+    // "start": "concurrently \"npm start\" \"cd client-react && npm start\"",
+
+    "start": "npm start",
+    
 
     "dev": "concurrently \"npm start\" \"cd client-react && npm start\"",
     "heroku-postbuild": "cd client-react && npm install && npm run build"
