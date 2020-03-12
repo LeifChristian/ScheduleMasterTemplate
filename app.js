@@ -40,6 +40,15 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "./client-react/build/index.html"));
   });
 
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+    res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+
   console.log('latest commit working!');
 
 
