@@ -48,7 +48,8 @@ app.get("*", (req, res) => {
     "Origin, X-Requested-With, Content-Type, Accept"
     );
     next();
-
+    });
+    app.options("*", cors());
   console.log('latest commit working!');
 
 
@@ -114,9 +115,5 @@ todoRoutes.route('/update/:id').post(function(req, res) {
 });
 
 app.use('/todos', todoRoutes);
-
-//
-
-
 
 module.exports = app;
