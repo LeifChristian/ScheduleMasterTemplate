@@ -40,6 +40,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "./client-react/build/index.html"));
   });
 
+  console.log('latest commit working!');
 
 
 var mongoDB =
