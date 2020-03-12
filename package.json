@@ -3,12 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    
-
-    // below is original start script using concurrently.
-    //heroku is serving production build of react so hopefully
-    // a simple start script of npm start will suffice
-    // "start": "concurrently \"npm start\" \"cd client-react && npm start\"",
 
     "start": "npm start",
     
