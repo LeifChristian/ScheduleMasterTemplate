@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "concurrently \"npm start\" \"cd./client-react && npm start\""
+    "dev": "concurrently \"npm start\" \"cd./client-react && npm start\"",
+    "heroku-postbuild": "cd client-react && npm install && npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
